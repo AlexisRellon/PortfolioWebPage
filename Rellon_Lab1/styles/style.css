@@ -5,6 +5,7 @@ palette: #FCF7F8-smoke #CED3DC-grey #275DAD-blue #362C28-black
 /* Global style */
 * {
 	font-family: "Montserrat", sans-serif;
+	font-size: 15pt;
 	color: black;
 }
 
