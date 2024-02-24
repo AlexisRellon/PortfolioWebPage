@@ -1,0 +1,349 @@
+/* 
+palette: #FCF7F8-smoke #CED3DC-grey #275DAD-blue #362C28-black 
+*/
+
+/* Global style */
+* {
+	font-family: "Montserrat", sans-serif;
+	color: black;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #FCF7F8;
+	margin: 0px;
+	height: 100%;
+}
+
+.header_container {
+	position: sticky;
+	top: 0;
+	background-color: transparent;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header_container.sticky {
+	background-color: #FCF7F8;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 980px) {
+	.header_container .navigation_link {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		transition: 0.3s ease;
+	}
+
+	.header_container .title_container {
+		padding: 0px !important;
+	}
+
+	.header_container .link_lists {
+		padding: 0px !important;
+	}
+
+	.holder {
+		margin-top: 5% !important;
+	}
+
+	.contents textarea {
+		height: 12rem !important;
+	}
+
+	.form .submit span {
+		display: none !important;
+	}
+}
+
+.navigation_link {
+	margin: 15px 0px 15px 0px;
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation_link .title_container {
+	padding:0px 15px 0px 7%;
+}
+
+.navigation_link .title_container h1 {
+	margin: 20px 0px 20px 0px;
+	font-size: 25px;
+	font-weight: 250;
+}
+
+.navigation_link .link_lists {
+	display: inline-block;
+	padding: 0px 7% 0px 15px;
+}
+
+.navigation_link .link_lists li {
+	display: inline-block;
+	padding: 0px 15px 0px 15px;
+}
+
+.navigation_link .link_lists li a {
+	text-decoration: none;
+	color: black;
+}
+
+.navigation_link .link_lists li a#home {
+	color: white;
+}
+
+.navigation_link .link_lists li #active {
+	color: #275DAD;
+	font-weight: 500;
+}
+
+/* link style */
+
+.link_lists li a {
+	transition: 0.35s ease-in-out;
+}
+
+.link_lists li a:hover {
+	color: #6998DD;
+	transition: 0.35s ease-in-out;
+}
+
+.link_lists li a:focus {
+	color: #275DAD;
+}
+
+.link_lists li a:active {
+	font-weight: 500;
+}
+
+/* footer style */
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	place-items: center;
+}
+
+footer.sticky {
+	width: 100%;
+	display: flex;
+	bottom: 0;
+	position: absolute;
+}
+
+footer p {
+	font-size: 90%;
+	font-weight: 300;
+}
+
+/* holders */
+
+.holder {
+	margin-top: 10%;
+	display: flex;
+	justify-content: space-between;
+	max-height: 350px;
+}
+
+.holder .text_containers {
+	margin: 0px 0px 0px 15%;
+	width:	450px;
+	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	/* Glassmorphism */
+	background: rgba( 255, 255, 255, 0.15 );
+	box-shadow: 0 8px 32px 0 rgba(69, 69, 69, 0.37);
+	backdrop-filter: blur( 18px );
+	-webkit-backdrop-filter: blur( 18px );
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	border-radius: 1rem;
+	padding: 1.5rem;
+	z-index: 10;
+	color: whitesmoke;
+}
+
+@media (max-width: 1270px) {
+	.holder .text_containers {
+		width: 25% !important;
+		height: 25% !important;
+	}
+
+	.holder {
+		align-items: center;
+	}
+
+	.holder .image_holder img {
+		scale: 95% !important;
+	}
+}
+
+.holder .text_containers h2.introduction {
+	font-weight: 300;
+	margin: 5% 0px 5% 0px;
+}
+
+.holder .text_containers h2.highlight {
+	color: #275DAD;
+	font-weight: 700;
+	margin: 5% 0px 5% 0px;
+}
+
+.holder .text_containers p.role {
+	font-weight: 250;
+	color: #4881D5;
+	margin: 5% 0px 5% 0px;
+}
+
+.holder .image_holder {
+	margin: 0 15% 0px 0px;
+	float: right;
+	border-radius: 50%;
+}
+
+.holder .image_holder img {
+	height: 325px;
+	width: 325px;
+	border-radius: 50%;
+	position: inherit;
+	scale: 120%;
+}
+
+/* about style */
+.contents {
+	margin: 1% 10% 1% 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contents div.items {
+	margin-bottom: 3%;
+}
+
+.contents .items h3 {
+	color: #275DAD;
+	font-size: 25px;
+}
+
+.contents .items p {
+	text-align: justify;
+}
+
+.message {
+	margin-top: 3rem;
+}
+
+.contents .items .item_lists {
+	display: flex;
+	align-items: center;
+}
+
+.contents .items .item_lists ul {
+	width: 100%;
+	list-style: none;
+	padding: 0px 40px;
+}
+
+.contents .items .item_lists li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+.contents .items .item_lists h4 {
+	margin: 10px 0px;
+	padding-right: 20px;
+}
+
+.contents .items .item_lists li > h5,  p.info {
+	margin: 10px 0px;
+	padding: 0px 2%;
+}
+
+/* Text Area Style */
+
+.form textarea {
+    background-color: #FCF7F8;
+    border: 1px solid #4d4d4d; /* Specify border shorthand */
+    border-radius: 3px;
+    padding: 8px; /* Add some padding for better appearance */
+	resize: none;
+	height: 15rem;
+	max-height: 15rem;
+	width: 50%;
+}
+
+.form textarea:focus {
+    border-color: #275DAD;
+    outline: none; /* Remove the default outline on focus */
+    box-shadow: 0 0 5px rgba(39, 93, 173, 0.7); /* Add a subtle box shadow on focus */
+}
+
+
+/* Button Style */
+
+.form button.submit {
+	bottom: 0;
+	margin-top: 2%;
+
+	width: 130px;
+	color: white;
+	background-color: #275DAD;
+	font-size: 15px;
+	font-weight: 800;
+	padding: 14px 20px;
+	border: 0px solid;
+	border-radius:5px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.25s ease-in;
+}
+
+.form button.submit:hover {
+	background-color: #4881D5;
+	transition: 0.25s ease-out;
+}
+
+.form button.submit:active {
+	background-color: #6998DD;
+}
+
+.form .submit span {
+	margin-left: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url("../resources/send_white.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* Blob */
+.blob {
+	position: fixed;
+	top: 0;
+	left: 0;
+	fill: #023F92;
+	width: 50vmax;
+	z-index: -1;
+	animation: move 20s ease-in-out infinite;
+	transform-origin: 50% 50%;
+}
+  
+@keyframes move {
+	0%   { transform: scale(1)   translate(10px, -30px); }
+	38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+	40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+	78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+	80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+	100% { transform: scale(1)   translate(10px, -30px); }
+}

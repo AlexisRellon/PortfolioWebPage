@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		
+		<title>Personal Portfolio - Home</title>
+
+		<!-- external files -->
+		<link rel="stylesheet" href="..\Rellon_Lab1\styles\style.css">
+
+		<!-- favicon -->
+		
+	
+		<!-- metadata -->
+		<meta lang="eng">
+		<meta charset="UTF-8">
+		<meta title="Personal Portfolio - Home">
+		
+		<!-- external fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<!-- Javascripts -->
+		<script>
+			window.onscroll = function() { stickyHeader(); };
+
+			function stickyHeader() {
+			  var header = document.querySelector('.header_container');
+			  var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+			  var scrollPercentage = (window.scrollY / scrollHeight) * 100;
+		
+			  if (scrollPercentage > 10) {
+				header.classList.add('sticky');
+			  } else {
+				header.classList.remove('sticky');
+			  }
+			}
+		  </script>
+
+	</head>
+	<body>
+		
+		<header class="header_container">
+			<nav class="navigation_link">
+				<div class="title_container">
+					<h1>WELCOME TO MY PORTFOLIO</h1>
+				</div>
+				<ul class="link_lists">
+					<li><a href="..\Rellon_Lab1\index.html">Home</a></li>
+					<li><a href="..\Rellon_Lab1\about.html" id="active">About</a></li>
+					<li><a href="..\Rellon_Lab1\contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div class="contents">
+			<div class="items">
+				<h3>Personal Information</h3>
+				<p>Hello! My name is Alexis John L. Rellon, and I'm a second-year college student pursuing a degree in Computer Science. Currently enrolled in Lyceum of the Philippine - Cavite Campus, I have a passion for technology and a strong interest in software development.</p>
+				<p>As a computer science enthusiast, I enjoy exploring various programming languages and frameworks. My academic journey has provided me with a solid foundation in algorithms, data structures, and problem-solving skills. I am eager to apply my knowledge to real-world projects and contribute to the field of technology.</p>
+				<p>Outside of academics, I actively engage in coding projects, attend tech meetups, and participate in coding competitions to enhance my skills and stay updated with the latest industry trends. I believe in the power of continuous learning and enjoy taking on challenges that push my boundaries.</p>
+			</div>
+			<div class="items">
+				<h3>Education</h3>
+				<div class="item_lists">
+					<ul>
+						<li><h4>2020</h4><h5>Junior Highschool</h5><p class="info">Cachapero Learning School Inc.</p></li>
+						<li><h4>2022</h4><h5>Senior Highschool</h5><p class="info">Cachapero Academe Inc.</p></li>
+						<li><h4>2022 - Current</h4><h5>College</h5><p class="info">Lyceum of The Philippines - Cavite Campus</p></li>
+					</ul>
+				</div>
+			</div>
+			<div class="items">
+				<h3>Projects</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Euismod nisi porta lorem mollis aliquam. Sagittis orci a scelerisque purus semper eget. A erat nam at lectus urna. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Interdum posuere lorem ipsum dolor sit amet. Urna duis convallis convallis tellus id interdum. Eget aliquet nibh praesent tristique magna sit amet purus. Nunc scelerisque viverra mauris in. At quis risus sed vulputate odio ut enim blandit volutpat. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Euismod quis viverra nibh cras pulvinar. Odio facilisis mauris sit amet massa vitae tortor condimentum. Convallis tellus id interdum velit. Praesent tristique magna sit amet. Condimentum lacinia quis vel eros. Nullam vehicula ipsum a arcu cursus vitae. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer.</p>
+			</div>
+		</div>
+		
+		<footer>
+				<p>&copy Copyright <b>Alexis John Rellon</b> (2024)</p>
+			</footer>
+		
+	</body>
+</html>
