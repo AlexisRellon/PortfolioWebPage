@@ -1,0 +1,58 @@
+/* Text Area Style */
+
+.form textarea {
+    background-color: #FCF7F8;
+    border: 1px solid #4d4d4d; /* Specify border shorthand */
+    border-radius: 3px;
+    padding: 8px; /* Add some padding for better appearance */
+	resize: none;
+	height: 15rem;
+	max-height: 15rem;
+	width: 50%;
+}
+
+.form textarea:focus {
+    border-color: #275DAD;
+    outline: none; /* Remove the default outline on focus */
+    box-shadow: 0 0 5px rgba(39, 93, 173, 0.7); /* Add a subtle box shadow on focus */
+}
+
+
+/* Button Style */
+
+.form button.submit {
+	bottom: 0;
+	margin-top: 2%;
+
+	width: 130px;
+	color: white;
+	background-color: #275DAD;
+	font-size: 15px;
+	font-weight: 800;
+	padding: 14px 20px;
+	border: 0px solid;
+	border-radius:5px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.25s ease-in;
+}
+
+.form button.submit:hover {
+	background-color: #4881D5;
+	transition: 0.25s ease-out;
+}
+
+.form button.submit:active {
+	background-color: #6998DD;
+}
+
+.form .submit span {
+	margin-left: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url("../resources/send_white.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}

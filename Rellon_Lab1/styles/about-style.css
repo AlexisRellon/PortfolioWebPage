@@ -1,0 +1,85 @@
+/* about style */
+.contents {
+	margin: 1% 10% 1% 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contents div.items {
+	margin-bottom: 3%;
+}
+
+.contents .items h3 {
+	color: #275DAD;
+	font-size: 25px;
+}
+
+.contents .items > p {
+	text-align: justify;
+}
+
+.message {
+	margin-top: 3rem;
+}
+
+.contents .items .item_lists {
+	display: flex;
+	align-items: center;
+}
+
+/* Education Cards style */
+
+.contents .items .education-cards {
+	display: grid;
+	height: 350px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 35px;
+	margin: 0px 55px;
+	text-align: center;
+}
+
+.contents .items .education-card:hover {
+	background-color: #d5e3f9;
+	transition: 0.25s ease-in;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px 0 rgba(69, 69, 69, 0.25);
+	z-index: 1;
+}
+
+@media (max-width: 1355px) {
+	.contents .items .education-cards {
+		height: auto;
+	}
+}
+
+.contents .items .education-card {
+	background-color: whitesmoke;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: 0.25s ease-out;
+}
+
+.contents .items .education-card .education-image {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url("../resources/highschool.png");
+	background-size: cover;
+	margin: 10px 10px;
+}
+
+.contents .items .education-card .education-image.college {
+	background-image: url("../resources/university.png");
+}
+
+@media (max-width: 980px) {
+    .contents textarea {
+		height: 12rem !important;
+	}
+}

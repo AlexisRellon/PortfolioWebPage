@@ -21,12 +21,14 @@ body {
 	top: 0;
 	background-color: transparent;
 	transition: background-color 0.3s, box-shadow 0.3s;
+	z-index: 2;
 }
 
 .header_container.sticky {
 	background-color: #FCF7F8;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 	transition: background-color 0.3s, box-shadow 0.3s;
+	z-index: 2;
 }
 
 @media (max-width: 980px) {
@@ -47,10 +49,6 @@ body {
 
 	.holder {
 		margin-top: 5% !important;
-	}
-
-	.contents textarea {
-		height: 12rem !important;
 	}
 
 	.form .submit span {
@@ -213,118 +211,6 @@ footer p {
 	border-radius: 50%;
 	position: inherit;
 	scale: 120%;
-}
-
-/* about style */
-.contents {
-	margin: 1% 10% 1% 10%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.contents div.items {
-	margin-bottom: 3%;
-}
-
-.contents .items h3 {
-	color: #275DAD;
-	font-size: 25px;
-}
-
-.contents .items p {
-	text-align: justify;
-}
-
-.message {
-	margin-top: 3rem;
-}
-
-.contents .items .item_lists {
-	display: flex;
-	align-items: center;
-}
-
-.contents .items .item_lists ul {
-	width: 100%;
-	list-style: none;
-	padding: 0px 40px;
-}
-
-.contents .items .item_lists li {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	margin: 10px 0px;
-}
-
-.contents .items .item_lists h4 {
-	margin: 10px 0px;
-	padding-right: 20px;
-}
-
-.contents .items .item_lists li > h5,  p.info {
-	margin: 10px 0px;
-	padding: 0px 2%;
-}
-
-/* Text Area Style */
-
-.form textarea {
-    background-color: #FCF7F8;
-    border: 1px solid #4d4d4d; /* Specify border shorthand */
-    border-radius: 3px;
-    padding: 8px; /* Add some padding for better appearance */
-	resize: none;
-	height: 15rem;
-	max-height: 15rem;
-	width: 50%;
-}
-
-.form textarea:focus {
-    border-color: #275DAD;
-    outline: none; /* Remove the default outline on focus */
-    box-shadow: 0 0 5px rgba(39, 93, 173, 0.7); /* Add a subtle box shadow on focus */
-}
-
-
-/* Button Style */
-
-.form button.submit {
-	bottom: 0;
-	margin-top: 2%;
-
-	width: 130px;
-	color: white;
-	background-color: #275DAD;
-	font-size: 15px;
-	font-weight: 800;
-	padding: 14px 20px;
-	border: 0px solid;
-	border-radius:5px;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	transition: 0.25s ease-in;
-}
-
-.form button.submit:hover {
-	background-color: #4881D5;
-	transition: 0.25s ease-out;
-}
-
-.form button.submit:active {
-	background-color: #6998DD;
-}
-
-.form .submit span {
-	margin-left: 20px;
-	display: block;
-	width: 20px;
-	height: 20px;
-	background-image: url("../resources/send_white.png");
-	background-repeat: no-repeat;
-	background-size: contain;
 }
 
 /* Blob */
