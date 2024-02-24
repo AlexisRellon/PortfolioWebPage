@@ -1,8 +1,32 @@
+:root {
+	/** CSS DARK THEME PRIMARY COLORS */
+	--color-primary-100: #275dad;
+	--color-primary-200: #486db6;
+	--color-primary-300: #627ebf;
+	--color-primary-400: #7a8fc9;
+	--color-primary-500: #91a1d2;
+	--color-primary-600: #a7b3db;
+	/** CSS DARK THEME SURFACE COLORS */
+	--color-surface-100: #121212;
+	--color-surface-200: #282828;
+	--color-surface-300: #3f3f3f;
+	--color-surface-400: #575757;
+	--color-surface-500: #717171;
+	--color-surface-600: #8b8b8b;
+	/** CSS DARK THEME MIXED SURFACE COLORS */
+	--color-surface-mixed-100: #171920;
+	--color-surface-mixed-200: #2c2e35;
+	--color-surface-mixed-300: #43444b;
+	--color-surface-mixed-400: #5b5c62;
+	--color-surface-mixed-500: #74757a;
+	--color-surface-mixed-600: #8e8f93;
+}
+
 /* Text Area Style */
 
 .form textarea {
-    background-color: #FCF7F8;
-    border: 1px solid #4d4d4d; /* Specify border shorthand */
+    background-color: var(--color-surface-mixed-200);
+    border: 1px solid var(--color-surface-mixed-400); /* Specify border shorthand */
     border-radius: 3px;
     padding: 8px; /* Add some padding for better appearance */
 	resize: none;
@@ -12,7 +36,7 @@
 }
 
 .form textarea:focus {
-    border-color: #275DAD;
+    border-color: var(--color-primary-100);
     outline: none; /* Remove the default outline on focus */
     box-shadow: 0 0 5px rgba(39, 93, 173, 0.7); /* Add a subtle box shadow on focus */
 }
@@ -23,7 +47,6 @@
 .form button.submit {
 	bottom: 0;
 	margin-top: 2%;
-
 	width: 130px;
 	color: white;
 	background-color: #275DAD;
@@ -35,12 +58,24 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	transition: 0.25s ease-in;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
+}
+
+.form button.submit > p {
+	transform: translateX(1rem);
+	margin: 0;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
+}
+
+.form button.submit:hover > p {
+	transform: translateX(0);
+	margin: 0;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
 }
 
 .form button.submit:hover {
 	background-color: #4881D5;
-	transition: 0.25s ease-out;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
 }
 
 .form button.submit:active {
@@ -49,10 +84,19 @@
 
 .form .submit span {
 	margin-left: 20px;
-	display: block;
-	width: 20px;
-	height: 20px;
+	display: inline-block;
+	opacity: 0;
+	transform: translateX(-1rem);
+	width: 17px;
+	height: 17px;
 	background-image: url("../resources/send_white.png");
 	background-repeat: no-repeat;
 	background-size: contain;
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
+}
+
+.form .submit:hover > span {
+	opacity: 100;
+	transform: translateX(0);
+	transition: all .3s cubic-bezier(.25,.8,.25,1);
 }
