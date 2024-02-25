@@ -26,9 +26,9 @@
 
 .form textarea {
     background-color: var(--color-surface-mixed-200);
-    border: 1px solid var(--color-surface-mixed-400); /* Specify border shorthand */
-    border-radius: 3px;
-    padding: 8px; /* Add some padding for better appearance */
+    border: 1px solid var(--color-surface-mixed-400);
+    border-radius: 5px;
+    padding: 8px;
 	resize: none;
 	height: 15rem;
 	max-height: 15rem;
@@ -37,8 +37,8 @@
 
 .form textarea:focus {
     border-color: var(--color-primary-100);
-    outline: none; /* Remove the default outline on focus */
-    box-shadow: 0 0 5px rgba(39, 93, 173, 0.7); /* Add a subtle box shadow on focus */
+    outline: none; 
+    box-shadow: 0 0 5px rgba(39, 93, 173, 0.7);
 }
 
 
