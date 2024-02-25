@@ -29,16 +29,22 @@
 }
 
 body {
-	overflow-x: hidden;
-	display: flex;
+/* 	display: flex;
 	flex-direction: column;
 	background-color: var(--color-surface-mixed-100);
 	margin: 0px;
 	height: 100%;
+	overflow-y: auto; */
+	overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-mixed-100);
+    margin: 0px;
+    height: 100%;
 }
 
 #home {
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .header_container {
@@ -162,18 +168,6 @@ footer p {
 	position: relative;
 	max-height: 420px;
 	z-index: 3;
-
-/* 	Glassmorphism effect
-	background: rgba( 255, 255, 255, 0.15 );
-	box-shadow: 0 8px 32px 0 rgba(69, 69, 69, 0.37);
-	backdrop-filter: blur( 18px );
-	-webkit-backdrop-filter: blur( 18px );
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
-	border-radius: 1rem;
-	padding: 1.5rem;
-	z-index: 10;
-	color: whitesmoke; 
-*/
 }
 
 .card > h2, .card > p {
@@ -312,6 +306,39 @@ footer p {
 	transform: rotate(-45deg) translate(-10px, 10px);
 }
 
+/* Social bar  */
+.socials-bar {
+	margin-top: 35px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+}
+
+.social-icon {
+	display: inline-block;
+}
+
+.icon1 {
+	height: 50px;
+	width: 50px;
+	background-image: url("../resources/icons8_github_96px.png");
+	background-size: cover;
+}
+.icon2 {
+	height: 50px;
+	width: 50px;
+	background-image: url("../resources/icons8_Facebook_96px.png");
+	background-size: cover;
+}
+.icon3 {
+	height: 50px;
+	width: 50px;
+	background-image: url("../resources/icons8_twitter_96px.png");
+	background-size: cover;
+}
+
+
 /* Media responsive-layout */
 
 @media (max-height: 610px) {
@@ -343,12 +370,12 @@ footer p {
 	.link_lists {
 		display: flex !important;
 		flex-direction: column;
-		position: absolute;
-		top: -15%;
+		position: fixed;
+		top: 0;
 		left: 0;
 		transform: translateX(100%);
 		width: 100%;
-		height: 2000%;
+		height: 100%;
 		background-color: #1719203f;
 		border: var(--color-surface-200) 2px;
 		backdrop-filter: blur( 5px );
@@ -369,16 +396,16 @@ footer p {
         color: white;
     }
 
+	.socials-bar {
+		position: relative;
+		left: 20vh;
+	}
+
     #menu-toggle:checked + .hamburger + .navigation_link .link_lists {
         display: flex !important;
 		transform: translateX(0%) !important;
 		transition: all .3s cubic-bezier(.25,.8,.25,1);
     }
-
-	#menu-toggle:checked + label.hamburger {
-		content: '\2717' !important;
-		display: block !important;
-	}
 
 	#menu-toggle:checked > .link_lists > a {
 		font-size: 25pt;
@@ -416,14 +443,27 @@ footer p {
 	}
 
 	.card {
-/* 		width: 245px !important;
-		height: 420px !important;
-		transform: translateY(45%) !important;
-		scale: 1.5; */
-		position: absolute; /* Position the card absolutely */
-        bottom: 50%; /* Move the card to the horizontal center */
-        width: 80%; /* Adjust the width as needed */
-        margin: 0; /* Remove any margins */
+		position: absolute; 
+        bottom: 50%; 
+        width: 80%;
+        margin: 0; 
+	}
+
+	.card > h2, .card > p {
+		position: relative;
+		transform: translateY(5vh) !important;
+		bottom: -10vh !important;
+	}
+
+	.intro {
+		position: inherit;
+		top: -18vh;
+		left: 190%;
+	}
+
+	.socials-bar {
+		margin: 0;
+		transform: translateY(-10vh);
 	}
 
 	footer, footer.sticky {
@@ -444,6 +484,11 @@ footer p {
 
 	.holder {
 		align-items: center;
+	}
+
+	.image_holder span {
+		position: relative;
+		right: 30% !important;
 	}
 }
 
