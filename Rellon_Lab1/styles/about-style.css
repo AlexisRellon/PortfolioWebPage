@@ -111,9 +111,3 @@
 .contents .items .education-card .education-image.college {
 	background-image: url("../resources/university-white-icon.png");
 }
-
-@media (max-width: 980px) {
-    .contents textarea {
-		height: 12rem !important;
-	}
-}
