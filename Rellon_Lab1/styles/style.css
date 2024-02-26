@@ -59,7 +59,7 @@ body {
 	background-color: #171920c1;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.600);
 	transition: background-color 0.3s, box-shadow 0.3s;
-	z-index: 2;
+	z-index: 5;
 }
 
 .navigation_link {
@@ -445,6 +445,7 @@ footer p {
 	.holder .image_holder > span {
 		scale: 2;
 		top: -20%;
+		opacity: 70%;
 	}
 
 	.card {
@@ -469,10 +470,6 @@ footer p {
 	.socials-bar {
 		margin: 0;
 		transform: translateY(-10vh);
-	}
-
-	.image_holder {
-		opacity: 50;
 	}
 
 	footer, footer.sticky {
