@@ -111,3 +111,99 @@
 .contents .items .education-card .education-image.college {
 	background-image: url("../resources/university-white-icon.png");
 }
+
+/* Project showcase */
+
+.projects-showcase {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.projects-showcase sub {
+	color: var(--color-primary-300);
+	word-spacing: 1vw;
+}
+
+.content-box {
+	flex-shrink: 3;
+}
+
+.showcase1 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.showcase1 > .image-showcase {
+	display: flex;
+	flex-direction: row-reverse
+}
+
+.image-showcase > img {
+	width: 65%;
+}
+
+.showcase2 {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	gap: 5vw;
+}
+
+.box2 {
+	flex-shrink: 2;
+	width: 500%;
+}
+
+.showcase2 .box2 p {
+	text-align: right;
+}
+
+/* Button Style */
+
+.button-view {
+	margin: 2vh 0;
+	align-items: center;
+	background-color: var(--color-primary-100);
+	border: 2px solid var(--color-primary-100);
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	fill: #000;
+	font-size: 16px;
+	font-weight: 600;
+	height: 48px;
+	justify-content: center;
+	letter-spacing: -.8px;
+	line-height: 24px;
+	min-width: 140px;
+	outline: 0;
+	padding: 0 17px;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button-view:hover {
+	background-color: var(--color-primary-200);
+	border-color: var(--color-primary-200);
+	fill: var(--color-primary-100);
+}
+
+.button-view:active {
+	background-color: var(--color-primary-300);
+	border-color: var(--color-primary-300);
+	fill: var(--color-primary-100);
+}
+
+@media (min-width: 768px) {
+	.button-view {
+		min-width: 170px;
+	}
+}
